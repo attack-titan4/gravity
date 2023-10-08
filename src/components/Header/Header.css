@@ -1,0 +1,58 @@
+.navbar header{
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+    padding: 0 20px;
+    padding-top: 10px;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    z-index: 99;
+     
+}
+
+.list{
+    display: flex;
+    list-style-type: none;
+    margin-left: 90px;
+    margin-top: 30px;
+}
+
+.list li {
+    padding: 0 1rem;
+    margin-top: 30px;
+}
+.image {
+    display: flex;
+    align-items: centre;
+    padding:0 ;
+    margin-right: 10px;
+    padding-left: 40px;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background:transparent ;
+    margin-top: 0rem;
+}
+
+.tagus {
+    margin-top: 20rem;
+    color: white;
+  }
+  
+  .emailsignup {
+    margin-top: 25rem;
+    display: flex;
+    margin-left: 30rem;
+    color: rgb(242, 237, 237);
+  }
+  
+  .emailsignup input {
+    margin-left: 20px;
+  }
+  
+  .emailsignup button {
+    background-color: black;
+    color: white;
+  }
+

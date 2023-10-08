@@ -1,0 +1,64 @@
+.drop{
+    color: #FFF;
+  font-family: Poppins;
+  font-size: 47px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin-top: 100px;
+  margin-left: 90px;
+  margin-bottom: 10px;
+}
+
+.coming{
+    color: aliceblue;
+    margin-left: 90px;
+    margin-top: 10px;
+}
+
+.join{
+    color: #1d1c1c;
+    background-color: #FFF;
+    margin-left: 90px;
+    margin-top: 10px;
+    border-radius: 20px;
+    height: 29px;
+    width: 72px;
+    font-family: Poppins;
+    
+}
+
+
+
+.container {
+    display: flex;
+    align-items: center; /* Vertically center content */
+  }
+  
+  /* Style for the text container */
+  .text-container {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  /* Style for the image container */
+  .image-container {
+    flex-shrink: 0; /* Don't shrink the image container */
+    margin-left: 20px; /* Adjust the margin as needed */
+    z-index: 100;
+    
+  }
+
+  .banner{
+    margin-top: 10px;
+    margin-right: 150px;
+    width: 431px;
+    height: 505px;
+    transition: transform 0.3s ease-in-out;
+    
+    
+    
+  }
+
+  .banner:hover {
+    transform: scale(1.1); /* Increase the size of the image on hover */
+  }

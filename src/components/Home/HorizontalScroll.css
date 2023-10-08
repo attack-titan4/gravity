@@ -1,0 +1,52 @@
+.gallery{
+  width: 2000px;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.gallery div{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 270px 270px 270px 270px 270px;
+  grid-gap: 2px;
+  padding: 1px;
+  flex: none;
+  margin-right: 10px;
+}
+
+.name-tag{
+  color: white;
+  margin-left: 30px;
+  margin-top: 10px;
+  
+}
+
+.gallery::-webkit-scrollbar{
+  display: none;
+}
+
+.gallery-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+}
+
+.left{
+  font-size: 15px;
+  cursor: pointer;
+  margin: 40px;
+  color: white;
+  margin-right: 100px;
+}
+
+.right{
+  font-size: 15px;
+  cursor: pointer;
+  margin: 40px;
+  color: white;
+  margin-left: 1px;
+}
+
+
+
