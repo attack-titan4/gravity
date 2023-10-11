@@ -9,11 +9,12 @@
   .footer-style {
     position: relative;
     bottom: 10px; /* Adjust the bottom spacing as needed */
-    left: 10px; /* Adjust the left spacing as needed */
+    /*left: 10px;*/ /* Adjust the left spacing as needed */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     /* Add other styles as needed */
+    margin-left: 10px;
   }
 
   .footer-style1 {
@@ -36,11 +37,12 @@
     margin-top: 50px;
     /* Adjust other margins as needed */
     /* You can remove or adjust the following properties: */
-    bottom: 190px; 
+    /*bottom: 190px; 
      right: 490px; 
     left: 710px; 
-     top: 510px;
+     top: 510px;*/
     /* Add other styles as needed */
+    align-self: center;
   }
 
   
@@ -163,4 +165,9 @@
     margin-bottom: 10px;
     margin-top: 400px;
     position: relative;
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
   }
