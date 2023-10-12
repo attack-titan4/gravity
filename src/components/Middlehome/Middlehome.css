@@ -32,3 +32,16 @@
   
 }
 
+@media (max-width: 768px) {
+  .middle {
+    padding-top: 100px; /* Reduce top padding for smaller screens */
+    padding-left: 20px; /* Adjust left padding for smaller screens */
+  }
+
+  .image-text {
+    top: 400px; /* Adjust the vertical position for smaller screens */
+    font-size: 32px; /* Further reduce font size for mobile */
+    padding: 5px; /* Reduce padding for mobile */
+    width: 90%; /* Make the text container 90% of the screen width */
+  }
+}

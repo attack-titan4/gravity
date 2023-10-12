@@ -1,55 +1,73 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Header.css"
 import { NavLink, Link} from 'react-router-dom'
-import {FaSearch, FaShoppingCart, FaUser} from 'react-icons/fa'
+import {FaBars, FaSearch, FaShoppingCart, FaTimes, FaUser} from 'react-icons/fa'
+import Cart from '../Cart/Cart'
 
 const Header = () => {
 
-  const activeLinkStyle = {
-    textDecoration: 'none',
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: '18px'
-  };
+  const [scrolled, setScrolled] = useState(false);
+  const[showCart, setShowCart] = useState(false);
+
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
   return (
     <>
-      <Link to="/">
-        <img className="image" src="/Resources/test.png"></img>
-      </Link>
+      <div className='hamburger' onClick={handleClick}>
+            {click ? (
+              <FaTimes size={30} style={{color:'white'}}/>
+            ) : (<FaBars size={30} style={{color:'white'}}/>)}
+            
+            
+      </div>
+
+      
+
+      
         
 
     <header className="navbar"> 
-        
-        <ul className="list">
+      <Link to="/" className='astro'>
+            <img src="/Resources/test.png"></img>
+      </Link>
+        <ul className={click ? "list active" : "list"}>
           <li>
-          <Link to="/ourcollection" style={activeLinkStyle}> Our Collections</Link>
+          <Link to="/ourcollection" className='activelink'> Our Collections</Link>
           </li>
           <li>
-          <NavLink to="/aboutus" style={activeLinkStyle}>About us</NavLink>
+          <NavLink to="/aboutus" className='activelink'>About us</NavLink>
           </li>
           <li>
-          <NavLink to="/" style={activeLinkStyle}>Blogs</NavLink>
-          </li>
-          <li>
-            <NavLink>
-              <FaSearch size={15} style={{color:'white', marginLeft:"50rem", marginTop:"10px"}} />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink>
-            <FaShoppingCart size={15} style={{color:'white', marginLeft:"0.2rem", marginTop:"10px"}}/>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink>
-              <FaUser size={15} style={{color:'white', marginLeft:"0.2rem", marginTop:"10px"}}/>
-            </NavLink>
-            
+          <NavLink to="/"className='activelink' >Blogs</NavLink>
           </li>
         </ul>
+          <ul className='list2'>
+            <li>
+              <NavLink>
+                <FaSearch size={15} style={{color:'white',  marginTop:"10px"}} />
+              </NavLink>
+            </li>
+            <li>
+              <NavLink>
+              <FaShoppingCart size={15} style={{color:'white', marginTop:"10px"}} onClick={() => setShowCart(true)}/>
+              <span className='cart-count'>5</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink>
+                <FaUser size={15} style={{color:'white', marginTop:"10px"}}/>
+              </NavLink>
+            
+            </li>
+          </ul>
+
+          
+          
+        
         
     </header>
+    {showCart && <Cart setShowCart={setShowCart}/>}
     </>
   )
 }

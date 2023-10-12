@@ -18,6 +18,8 @@
   color: white;
   margin-left: 30px;
   margin-top: 10px;
+  width: 1px;
+  display: grid;
   
 }
 
@@ -46,6 +48,34 @@
   margin: 40px;
   color: white;
   margin-left: 1px;
+}
+
+@media (max-width: 768px) {
+  .gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 600px;
+    margin-left: 0px;
+    height: 100px;
+    width: 400px;
+  }
+
+  .gallery{
+    width: 300px;
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  .gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 270px 270px 270px 270px 270px;
+    grid-gap: 2px;
+    padding: 1px;
+    flex: none;
+    margin-right: 10px;
+  }
 }
 
 

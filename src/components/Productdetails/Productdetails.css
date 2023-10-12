@@ -141,3 +141,40 @@
     margin-top: 20px;
 
 }
+
+@media screen and (max-width: 1040px){
+    .single-product-page{
+        flex-direction: column;
+    }
+
+    .single-product-main{
+        margin-left: 10px;
+    }
+
+    .left-p{
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        margin-left: 70px;
+        margin-bottom: 60px;
+    
+    }
+
+    .right-p{
+        margin-left: 100px;
+        width: 300px;
+        margin-top: 80px;
+    }
+
+    .name{
+        font-size: 25px;
+        
+    }
+
+    .price{
+        font-size: 17px;
+    }
+
+   
+
+}
