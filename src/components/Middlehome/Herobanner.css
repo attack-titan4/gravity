@@ -36,24 +36,29 @@
   }
   
   /* Style for the text container */
-  .text-container {
+  .image-container {
+    order: 2; /* Place the image container second */
     flex: 1; /* Take up remaining space */
+    margin-left: 200px; /* Adjust the margin as needed */
+    z-index: 10;
   }
   
-  /* Style for the image container */
-  .image-container {
-    flex-shrink: 0; /* Don't shrink the image container */
-    margin-left: 20px; /* Adjust the margin as needed */
+  .text-container {
+    order: 1; /* Place the text container first */
+    flex-shrink: 0; /* Don't shrink the text container */
     z-index: 100;
-    
-  }
+    text-align: left; /* Text align to the right */
+  }  
+  
 
   .banner{
     margin-top: 10px;
     margin-right: 150px;
+    margin-left: 150px;
     width: 431px;
     height: 505px;
     transition: transform 0.3s ease-in-out;
+   
     
     
     
@@ -61,4 +66,72 @@
 
   .banner:hover {
     transform: scale(1.1); /* Increase the size of the image on hover */
+  }
+
+  @media (max-width: 768px) {
+    .image-container {
+      display: inline;
+      justify-content: left; /* Horizontally center the content */ /* Vertically center the content */
+      height: 10px;
+      width: 10%; /* Make the container full viewport height */
+      z-index: 50;
+      position: absolute; /* Set the position to relative for absolute positioning inside */
+      margin-left: 10px;
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+    
+    .banner {
+      width: 280px;
+      height: 280px;
+      transition: transform 0.3s ease-in-out;
+      position: relative; /* Position absolutely within the relative container */
+      margin-left: 1px;
+      margin-top: 1px;
+      margin-right: 0px;
+      padding-top: 0px;
+      z-index: 99;
+      
+
+    }
+
+    .drop{
+      color: #FFF;
+    font-family: Poppins;
+    font-size: 47px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    margin-top: 200px;
+    
+    margin-bottom: 10px;
+    padding-top: 200px;
+  }
+  
+  .coming{
+      color: aliceblue;
+      margin-left: 90px;
+      margin-top: 10px;
+  }
+  
+  .join{
+      color: #1d1c1c;
+      background-color: #FFF;
+      margin-left: 90px;
+      margin-top: 10px;
+      border-radius: 20px;
+      height: 29px;
+      width: 72px;
+      font-family: Poppins;
+      
+  }
+
+  .text-container {
+    margin-top: 100px;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    padding-top: 1px;
+    z-index: 1;
+  }
   }
