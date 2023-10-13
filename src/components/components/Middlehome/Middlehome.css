@@ -1,0 +1,61 @@
+.middle {
+  position: relative;
+  max-width: 150%; /* Ensure images don't exceed container width */
+  display: inline-block;
+  padding-top: 200px;
+  padding-left: 120px;
+   
+  }
+  
+  .middle img {
+    max-width: 100%; /* Prevent images from exceeding their container width */
+    height: auto;
+    
+    
+  }
+
+  .image-text {
+    position: absolute;
+    top: 600px; /* Position at the top of the parent container */
+    
+    background-color: transparent; /* Semi-transparent background */
+    color: #FFF;
+    padding: 10px;
+    width: 1175px;
+    height: 148px;
+    font-family: Inter;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  
+}
+
+@media (min-width: 890px) {
+  .image-text {
+    left: 58%;
+      /* Center the text horizontally within the container */
+      transform: translateX(-50%);
+      /* Adjust for horizontal centering */
+  }
+}
+
+@media (max-width: 890px) {
+  .image-text { 
+    font-size: 46px;
+    }
+}
+
+@media (max-width: 768px) {
+  .middle {
+    padding-top: 100px; /* Reduce top padding for smaller screens */
+    padding-left: 20px; /* Adjust left padding for smaller screens */
+  }
+
+  .image-text {
+    top: 400px; /* Adjust the vertical position for smaller screens */
+    font-size: 32px; /* Further reduce font size for mobile */
+    padding: 5px; /* Reduce padding for mobile */
+    width: 90%; /* Make the text container 90% of the screen width */
+  }
+}
