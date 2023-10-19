@@ -2,6 +2,7 @@ import React from 'react'
 import "./Cart.css"
 import { FaCartArrowDown, FaCartPlus, FaShoppingCart, FaTimes } from 'react-icons/fa'
 import Cartitem from './Cartitem'
+import { Link } from 'react-router-dom'
 
 const Cart = ({setShowCart}) => {
   return (
@@ -15,23 +16,26 @@ const Cart = ({setShowCart}) => {
                     <span className='close'>Close</span>
                 </span>
             </div>
-            <div className='empty-cart'>
+            {/* <div className='empty-cart'>
                 <FaShoppingCart className='empty-cart-icon'/>
                 <span>No Product in the Cart.</span>
                 <button className='return-btn'>RETURN TO SHOP</button>
-            </div>
+            </div> */}
             <>
-                {/* <Cartitem/>
+                <Cartitem/>
                 <div className='cart-footer'>
                     <div className='subtotal'>
                         <span className='sub-total'>Subtotal</span>
                         <span className='total-text'>&#8377;1234</span>
                     </div>
                     <div className='checkout'>
-                        <button className='checkout-btn'>Checkout</button>
+                        <Link to='/checkout' className='checkout-link'>
+                            <button className='checkout-btn'>Checkout</button>
+                        </Link>
+                        
                     </div>
                     
-                </div>    */}
+                </div>   
             </>
         </div>
 

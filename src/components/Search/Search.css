@@ -1,0 +1,141 @@
+.search-modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: rgb(1, 1, 1);
+    transform: translateY(100%);
+    animation: slideSearchWindow 0.5s ease forwards;
+}
+
+.form-field{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 50px;
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    position: relative;
+
+}
+
+.form-field input{
+    width: 100%;
+    max-width: 1200px;
+    height: 40px;
+    
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(20, 19, 19);
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+
+}
+
+.search-close{
+   
+    font-size: 30px;
+    right: 40px;
+    margin-top: 8px;
+    color: rgb(237, 66, 66);
+    cursor: pointer;
+}
+
+.search-result-content{
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.search-results{
+    height: calc(100vh-160px);
+    overflow: auto;
+    margin-top: 20px 0;
+
+}
+
+.search-result-items{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    color: white;
+    border-bottom: 1px solid rgba(255, 254, 254, 0.1);
+    cursor: pointer;
+
+}
+
+.search-photo-container{
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+
+}
+
+.search-photo-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.search-prod-details{
+    overflow: hidden;
+
+}
+
+.search-prod-name{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden ;
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-weight: 600;
+    display: block;
+    
+
+}
+
+.search-prod-desc{
+    font-size: 14px;
+    line-height: 1;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden ;
+    color: rgb(148, 153, 157);
+
+}
+
+@keyframes slideSearchWindow{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{transform: translateY(0);}
+}
+
+@media (max-width: 768px){
+    .form-field input{
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .search-close{
+        font-size: 25px;
+        right: 20px;
+    }
+
+    .search-result-content{
+        max-width: calc(100%-20px);
+
+    }
+
+    .search-results{
+        height: calc(100vh-110px);
+    }
+}

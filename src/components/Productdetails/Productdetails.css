@@ -1,5 +1,6 @@
 .single-product-main{
     margin-left: 100px;
+    
 }
 
 .layout{
@@ -29,43 +30,46 @@
 .right-p{
     margin-left: 200px;
     width: 500px;
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 .name{
     
     color: #FFF;
     font-family: Inter;
-    font-size: 40px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
 }
 
-.price{
+.real-price{
     color: #FFF;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 20px;
+    margin-top: 30px;
+    text-decoration: line-through;
     
 }
 
 .size{
     color: #FFF;
-    font-family: Inter;
-    font-size: 15px;
+    font-family: Poppins;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .size-btn{
     display: flex;
+    flex-direction:row;
+    gap: 30px;
 }
 
 .btn{
@@ -75,13 +79,6 @@
     padding: 2px 5px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
-    border: 2px solid white;
-}
-
-.btn:focus{
-    background-color: white;
-    color: black;
 }
 
 .size-guide{
@@ -134,11 +131,135 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
+    border-radius: 40px;
+    z-index: 99;
+
+}
+
+.style-num{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1px;
+}
+
+.discount-price{
+    color: #CF1733;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.color{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 25px;
+    cursor: pointer;
+
+}
+
+.colors{
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+    gap: 40px;
+ 
+    
+}
+
+.red{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.orange{
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+    border-radius: 50%;
+    z-index: 99;
+    cursor: pointer;
+    
+}
+
+.blue{
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.black{
+    height: 50px;
+    width: 50px;
+    background-color: #232323;
+    border-radius: 50%;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.cart-btn{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    gap: 60px;
+}
+
+.buy-now{
+    outline: 0;
+    border: 2px solid white;
+    height: 50px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 40px;
+    z-index: 99;
+    
+}
+
+.product-image-list{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 20px;
+    margin-left: 130px;
+    margin-top: 20px;
+   
+}
+
+.product-image-list img{
+    background-color: rgba(181, 174, 174, 0.1);
+    border: 1px solid white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
 
 }
 

@@ -1,14 +1,15 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
+import './Cartitem.css'
 
 const Cartitem = () => {
   return (
     <div className='cart-products'>
       <div className='cart-product'>
-        <div className='image-container'>
+        <div className='photo-container'>
             <img src='\Resources\productimages\p2.png' alt='oops'/>
         </div>
-        <div className='prod-details'>
+        <div className='cart-prod-details'>
             <span className='prod-name'>Product name</span>
             <FaTimes className='prod-close'/>
             <div className='prod-quantity-btn'>

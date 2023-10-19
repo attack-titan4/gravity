@@ -24,6 +24,7 @@
     background: white;
     position: relative;
     z-index: 1;
+    display: flex;
     flex-direction: column;
     transform: translateX(100%);
     animation: slideCart 0.3s ease forwards;
@@ -118,6 +119,7 @@
 
 .checkout{
     padding: 20px 15px;
+    
 }
 
 .checkout-btn{
@@ -133,7 +135,12 @@
     color: white;
     background-color: black;
     border-bottom: 3px solid black;
+    text-decoration: none;
 
+}
+
+.checkout-link{
+    text-decoration: none;
 }
 
 @keyframes slideCart{

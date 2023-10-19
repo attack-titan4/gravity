@@ -3,11 +3,13 @@ import "./Header.css"
 import { NavLink, Link} from 'react-router-dom'
 import {FaBars, FaSearch, FaShoppingCart, FaTimes, FaUser} from 'react-icons/fa'
 import Cart from '../Cart/Cart'
+import Search from '../Search/Search'
 
 const Header = () => {
 
   const [scrolled, setScrolled] = useState(false);
   const[showCart, setShowCart] = useState(false);
+  const[showSearch, setShowSearch] = useState(false);
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -39,13 +41,13 @@ const Header = () => {
           <NavLink to="/aboutus" className='activelink'>About us</NavLink>
           </li>
           <li>
-          <NavLink to="/"className='activelink' >Blogs</NavLink>
+          <NavLink to="/blogs"className='activelink' >Blogs</NavLink>
           </li>
         </ul>
           <ul className='list2'>
             <li>
               <NavLink>
-                <FaSearch size={15} style={{color:'white',  marginTop:"10px"}} />
+                <FaSearch size={15} style={{color:'white',  marginTop:"10px"}} onClick={() => setShowSearch(true)} />
               </NavLink>
             </li>
             <li>
@@ -68,6 +70,7 @@ const Header = () => {
         
     </header>
     {showCart && <Cart setShowCart={setShowCart}/>}
+    {showSearch && <Search setShowSearch={setShowSearch}/>}
     </>
   )
 }
